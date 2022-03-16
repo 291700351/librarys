@@ -1,1 +1,2 @@
-# 自用项目MVVM基类封装
+# librarys
+个人自用Android框架
