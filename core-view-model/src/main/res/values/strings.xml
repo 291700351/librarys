@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="core_data_empty">暂无数据</string>
+    <string name="core_data_error">数据错误</string>
+    <string name="core_response_throwable_format">错误码:%1$d， 错误信息:%2$s</string>
+
+</resources>

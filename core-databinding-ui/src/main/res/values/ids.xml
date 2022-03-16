@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="flToolbarContainer" type="id" />
+    <item name="flContentContainer" type="id" />
+    <item name="flRefreshTopContainer" type="id" />
+    <item name="flRefreshBottomContainer" type="id" />
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="core_data_empty">暂无数据</string>
+    <string name="core_data_error">数据错误</string>
+    <string name="core_loading">正在加载中…</string>
+    <string name="core_pull_loading">上拉加载更多</string>
+    <string name="core_released_for_loading">释放立即加载</string>
+
+    <string name="core_load_failed">加载失败，请点我重试</string>
+    <string name="core_load_end">没有更多数据</string>
+    <string name="core_load_complete">加载成功</string>
+
+</resources>
