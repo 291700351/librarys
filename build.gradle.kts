@@ -4,11 +4,9 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        //        classpath("com.vanniktech:gradle-maven-publish-plugin:0.19.0")
         classpath("com.google.dagger:hilt-android-gradle-plugin:2.28-alpha")
     }
 }
-
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
     id("com.android.application") version "7.1.2" apply false
@@ -25,13 +23,46 @@ tasks.register<Delete>("clean") {
 }
 
 subprojects {
+    beforeEvaluate {
+        ext.set("compileSdk", 32)
+        ext.set("minSdk", 21)
+        ext.set("targetSdk", 32)
+    }
     afterEvaluate {
         if (!pluginManager.hasPlugin("com.android.library")) {
             println("Project $name is not an android library project, Skip...")
             return@afterEvaluate
         }
+        //配置android相关属性和上传maven配置
         configAndroidLibrary(this) {
 
+        }
+        //库基础依赖
+        dependencies {
+            add(
+                "implementation",
+                "androidx.core:core-ktx:1.7.0"
+            )
+            add(
+                "implementation",
+                "androidx.appcompat:appcompat:1.3.1"
+            )
+            add(
+                "implementation",
+                "com.google.android.material:material:1.5.0"
+            )
+            add(
+                "testImplementation",
+                "junit:junit:4.13.2"
+            )
+            add(
+                "androidTestImplementation",
+                "androidx.test.ext:junit:1.1.3"
+            )
+            add(
+                "androidTestImplementation",
+                "androidx.test.espresso:espresso-core:3.4.0"
+            )
         }
     }
 }

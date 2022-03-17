@@ -5,18 +5,18 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
+
 android {
-    compileSdk = 32
+    compileSdk = project.ext.get("compileSdk").toString().toInt()
 
     defaultConfig {
         applicationId = "io.github.lee.sample"
-        minSdk = 21
-        targetSdk = 32
+        minSdk = project.ext.get("minSdk").toString().toInt()
+        targetSdk = project.ext.get("targetSdk").toString().toInt()
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
     }
 
     buildFeatures {
@@ -24,7 +24,7 @@ android {
     }
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -43,16 +43,20 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.3.0")
+    implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("com.google.android.material:material:1.5.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.3")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
-    val coreVersion = "1.0.1"
-    implementation("io.github.291700351:core-view-model:${coreVersion}")
-    implementation("io.github.291700351:core-databinding-ui:${coreVersion}") {
+    //    val coreVersion = "1.0.1"
+    //    implementation("io.github.291700351:core-view-model:${coreVersion}")
+    //    implementation("io.github.291700351:core-databinding-ui:${coreVersion}") {
+    //        exclude("io.github.291700351")
+    //    }
+    implementation(project(":core-view-model"))
+    implementation(project(":core-databinding-ui")) {
         exclude("io.github.291700351")
     }
 
@@ -67,4 +71,9 @@ dependencies {
     // Hilt Support
     implementation("com.google.dagger:hilt-android:2.41")
     kapt("com.google.dagger:hilt-android-compiler:2.41")
+
+    // Runtime Permissions Support
+    val permissionsDispatcher = "4.9.1"
+    implementation("com.github.permissions-dispatcher:permissionsdispatcher:${permissionsDispatcher}")
+    kapt("com.github.permissions-dispatcher:permissionsdispatcher-processor:${permissionsDispatcher}")
 }
