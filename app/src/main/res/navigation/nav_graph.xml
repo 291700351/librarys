@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_homeFragment_to_scrollFragment"
             app:destination="@id/scrollFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_webFragment"
+            app:destination="@id/webFragment" />
     </fragment>
     <fragment
         android:id="@+id/recycleFragment"
@@ -25,4 +28,8 @@
         android:name="io.github.lee.sample.ui.scroll.ScrollFragment"
         android:label="ScrollFragment"
         tools:layout="@layout/fragment_scroll" />
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="io.github.lee.sample.ui.web.WebFragment"
+        android:label="WebFragment" />
 </navigation>

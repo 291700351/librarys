@@ -9,8 +9,10 @@
         <entry key="app/src/main/res/layout/item_home_function.xml" value="0.4" />
         <entry key="app/src/main/res/layout/item_recycle.xml" value="0.213768115942029" />
         <entry key="app/src/main/res/layout/toolbar_global_center_title.xml" value="0.2" />
+        <entry key="core-compose-ui/src/main/res/layout/sample_my_view.xml" value="0.1410191725529768" />
         <entry key="core-databinding-ui/src/main/res/layout/layout_base_hover.xml" value="0.12708333333333333" />
         <entry key="core-databinding-ui/src/main/res/layout/layout_base_refresh.xml" value="0.1644021739130435" />
+        <entry key="core-databinding-ui/src/main/res/layout/layout_base_web.xml" value="0.264" />
         <entry key="core-databinding-ui/src/main/res/layout/layout_refresh_recycler.xml" value="0.3438368860055607" />
         <entry key="core-databinding-ui/src/main/res/layout/layout_refresh_recycler_view.xml" value="0.14990942028985507" />
         <entry key="core-databinding-ui/src/main/res/layout/layout_refresh_scrollview.xml" value="0.23753846153846153" />

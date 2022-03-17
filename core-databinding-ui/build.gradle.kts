@@ -20,4 +20,6 @@ dependencies {
     // Adapter Support
     api("com.github.liangjingkanji:BRV:1.3.54")
 
+    // X5 WebView Support
+    api("com.tencent.tbs:tbssdk:44165")
 }

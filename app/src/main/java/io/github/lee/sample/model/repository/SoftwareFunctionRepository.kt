@@ -12,6 +12,7 @@ class SoftwareFunctionRepository @Inject constructor() {
             .apply {
                 add(HomeFunctions("RecyclerView列表", R.id.action_homeFragment_to_recycleFragment))
                 add(HomeFunctions("ScrollView", R.id.action_homeFragment_to_scrollFragment))
+                add(HomeFunctions("WebView", R.id.action_homeFragment_to_webFragment))
             }
     }
 
