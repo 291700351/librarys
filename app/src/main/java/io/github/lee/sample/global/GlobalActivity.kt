@@ -22,5 +22,6 @@ class GlobalActivity : BaseActivity<ActivityGlobalBinding, BaseViewModel>() {
         setupStatusBar {
             transparentBar()
         }
+
     }
 }

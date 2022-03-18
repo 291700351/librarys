@@ -3,7 +3,6 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
-
 dependencies {
     // ViewModel Support
     api("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")

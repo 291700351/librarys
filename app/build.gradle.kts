@@ -83,4 +83,5 @@ dependencies {
     val permissionsDispatcher = "4.9.1"
     implementation("com.github.permissions-dispatcher:permissionsdispatcher:${permissionsDispatcher}")
     kapt("com.github.permissions-dispatcher:permissionsdispatcher-processor:${permissionsDispatcher}")
+
 }

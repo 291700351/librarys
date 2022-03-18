@@ -17,6 +17,7 @@ plugins {
 
 rootProject.group = "io.github.291700351"
 rootProject.version = "1.0.1"
+rootProject.description = "预发布1.0.1版本"
 
 tasks.register<Delete>("clean") {
     delete(rootProject.buildDir)
